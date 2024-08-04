@@ -16,6 +16,8 @@ import Shiki from '@shikijs/markdown-it'
 import WebfontDownload from 'vite-plugin-webfont-dl'
 import VueRouter from 'unplugin-vue-router/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
+import tailwind from 'tailwindcss'
+import autoprefixer from 'autoprefixer'
 
 export default defineConfig({
   resolve: {
@@ -147,6 +149,12 @@ export default defineConfig({
   test: {
     include: ['test/**/*.test.ts'],
     environment: 'jsdom',
+  },
+
+  css: {
+    postcss: {
+      plugins: [tailwind(), autoprefixer()],
+    },
   },
 
   // https://github.com/antfu/vite-ssg
