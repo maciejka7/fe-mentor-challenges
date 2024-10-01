@@ -72,6 +72,11 @@ export default defineConfig({
       // allow auto import and register components used in markdown
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       dts: 'src/components.d.ts',
+      dirs: [
+        'src/components',
+        'src/projects',
+        'src/pages',
+      ],
     }),
 
     // https://github.com/antfu/unocss
@@ -147,7 +152,7 @@ export default defineConfig({
 
   // https://github.com/vitest-dev/vitest
   test: {
-    include: ['test/**/*.test.ts'],
+    include: ['test/**/*.test.ts', './**/*.test.ts', './**/*.spec.ts'],
     environment: 'jsdom',
   },
 

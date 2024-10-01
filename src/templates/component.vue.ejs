@@ -1,0 +1,20 @@
+<script setup lang="ts">
+
+    interface <%= name %>Props {
+        props: string
+    }
+
+const { props } = defineProps<<%= name %>Props>()
+</script>
+
+<template>
+  <div>
+    hello from  <%= name %>
+  </div>
+</template>
+
+
+
+<style scoped>
+
+</style>

@@ -1,11 +1,9 @@
 <script setup lang="ts">
-import type { CSSColorValue } from 'unocss'
 import type { HTMLAttributes } from 'vue'
 import { cn } from '~/lib/utils'
 
 const props = defineProps<{
   class?: HTMLAttributes['class']
-  tagColor: CSSColorValue
 }>()
 </script>
 
@@ -13,12 +11,12 @@ const props = defineProps<{
   <div
     :class="
       cn(
-        'rounded-lg border bg-card text-card-foreground shadow-sm flex ',
+        'rounded-lg border bg-card text-card-foreground shadow-sm flex flex-col ',
         props.class,
       )
     "
   >
-    <div :style="{ backgroundColor: tagColor }" class="w-1" />
+    <div />
     <slot />
   </div>
 </template>

@@ -4,16 +4,9 @@
     font-custom
   >
     <div class="h-screen">
-      <section class="grid grid-cols-3 h-full gap-4">
-        <SideMenu />
-        <!-- <div class="h-full p-4 border-r shadow-sm border-teal-950">
-          <h4>
-            Projects:
-          </h4>
-
-          <ProjectList />
-        </div> -->
-        <div class="p-4">
+      <section class="h-full flex flex-col gap-4">
+        <top-menu />
+        <div class="max-w-3/4 w-full flex flex-col self-center justify-center p-4">
           <RouterView />
         </div>
       </section>

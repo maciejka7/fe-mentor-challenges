@@ -23,6 +23,19 @@ module.exports = {
     },
     extend: {
       colors: {
+        // mean `product list with cart` - style to this project
+        plwc: {
+          red: '#C73B0F',
+          green: '#1EA575',
+          rose: {
+            900: '#260F08',
+            500: '#87635A',
+            400: '#AD8A85',
+            300: '#CAAFA7',
+            100: '#F5EEEC',
+            50: '#FCF8F6',
+          },
+        },
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',

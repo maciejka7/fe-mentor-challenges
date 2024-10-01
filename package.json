@@ -9,20 +9,25 @@
     "preview": "vite preview",
     "preview-https": "serve dist",
     "test": "vitest",
+    "test:ui": "vitest --ui",
     "test:e2e": "cypress open",
     "test:unit": "vitest",
     "typecheck": "vue-tsc --noEmit",
     "up": "taze major -I",
     "postinstall": "npx simple-git-hooks",
-    "sizecheck": "npx vite-bundle-visualizer"
+    "sizecheck": "npx vite-bundle-visualizer",
+    "create:project": "bun ./createprojectStructure.ts"
   },
   "dependencies": {
+    "@testing-library/vue": "5",
     "@unhead/vue": "^1.9.10",
     "@unocss/reset": "^0.60.2",
     "@vueuse/core": "^10.9.0",
     "@vueuse/head": "^2.0.0",
+    "citty": "^0.1.6",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "ejs": "^3.1.10",
     "lucide-vue-next": "^0.423.0",
     "nprogress": "^0.2.0",
     "pinia": "^2.1.7",
@@ -43,6 +48,7 @@
     "@types/nprogress": "^0.2.3",
     "@unocss/eslint-config": "^0.60.2",
     "@vitejs/plugin-vue": "^5.0.4",
+    "@vitest/ui": "^2.0.5",
     "@vue-macros/volar": "^0.19.1",
     "@vue/test-utils": "^2.4.6",
     "autoprefixer": "^10.4.19",
@@ -78,13 +84,7 @@
     "vite-plugin-webfont-dl": "^3.9.4",
     "vite-ssg": "^0.23.7",
     "vite-ssg-sitemap": "^0.6.1",
-    "vitest": "^1.6.0",
+    "vitest": "^2.0.5",
     "vue-tsc": "^2.0.19"
   },
-  "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged"
-  },
-  "lint-staged": {
-    "*": "eslint --fix"
-  }
 }
