@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 </script>
 
 <template>
@@ -8,7 +9,7 @@
       <ProductListProductsContainer />
     </div>
     <div>
-      cart
+      <ProductListEmptyCart />
     </div>
   </div>
 </template>

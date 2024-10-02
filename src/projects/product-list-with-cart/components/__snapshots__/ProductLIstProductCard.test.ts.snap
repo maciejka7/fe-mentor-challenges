@@ -2,7 +2,7 @@
 
 exports[`productListProductCard test > should render product image 1`] = `
 "<div class="max-w-60 rounded-xl">
-  <div data-test="card-container" class="relative w-full"><img src="/src/projects/product-list-with-cartndefined" class="rounded-xl" alt="Waffle with Berries"><button data-test="idle-button" class="border-plwc-rose-400 w-fit relative hover:border-plwc-red hover:text-plwc-red min-w-40 flex gap-2 border rounded-full bg-white px-7 py-3 transition-all transition-duration-300 absolute left-1/2 w-fit -top-6 -translate-x-1/2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart-icon text-plwc-red">
+  <div data-test="card-container" class="relative w-full"><img src="/src/projects/product-list-with-cartndefined" class="rounded-xl" alt="Waffle with Berries"><button data-test="idle-button" class="border-plwc-rose-400 hover:border-plwc-red hover:text-plwc-red relative min-w-40 w-fit flex gap-2 border rounded-full bg-white px-7 py-3 transition-all transition-duration-300 absolute left-1/2 w-fit -top-6 -translate-x-1/2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart-icon text-plwc-red">
         <circle cx="8" cy="21" r="1"></circle>
         <circle cx="19" cy="21" r="1"></circle>
         <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
