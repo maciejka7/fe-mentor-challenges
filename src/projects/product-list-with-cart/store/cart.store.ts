@@ -1,15 +1,8 @@
-import { defineStore } from "pinia"
-import { Product } from "../types"
-
-interface CartItem {
-  item: Product,
-  quantity: number
-}
-
+import { defineStore } from 'pinia'
+import { type CartItem, type CartItemEntity, createCartItem } from '../entity/cartItem'
 
 export const useCartStore = defineStore('cart', () => {
-
-  const cart = ref<CartItem[]>([])
+  const cart = ref<CartItemEntity[]>([])
   const isConfirmationButtonVisible = ref(false)
 
   const getTotalOrderValue = computed(() => {})
@@ -18,16 +11,33 @@ export const useCartStore = defineStore('cart', () => {
 
   const showConfirmationModal = () => {}
 
-  const storeItem = () => {}
+  const storeItem = (newItem: CartItem) => {
+    const newItemEntity = createCartItem(newItem)
+
+    cart.value.find((currentValue, index, arr) => {
+      console.log(currentValue)
+    })
+
+    cart.value.push(newItemEntity)
+  }
 
   const destroyItem = () => {}
 
   const clearCart = () => {}
 
-  const getCartItems = computed(() => {}) 
-
-    return { }
+  const getCartItems = computed(() => {
+    return cart.value
   })
 
+  return {
+    getCartItems,
+    storeItem,
+    destroyItem,
+    clearCart,
+    showConfirmationModal,
+    getTotalNumberOfItemInCart,
+    getTotalOrderValue,
+    isConfirmationButtonVisible,
 
+  }
 })
